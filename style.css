@@ -29,11 +29,15 @@ header h2::before {
   border-top: 1px solid #999;
   width: 70%;
 }
-
-header a {
+header .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav a {
   text-decoration: none;
   color: rgb(42, 127, 155);
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
 }
 
 main {
