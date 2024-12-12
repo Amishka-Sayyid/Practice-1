@@ -38,15 +38,16 @@ main {
   flex-wrap: wrap;
   align-content: space-around;
 }
-.box {
+#box {
   height: 25rem;
   width: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
 }
-.description {
+#description {
   text-align: center;
+  font-size: 1rem;
 }
 
 img {
@@ -58,6 +59,7 @@ img {
 
 footer {
   padding: 2rem;
+  position: relative;
   text-align: center;
   background-color: #f7d6c7;
   font-size: 1.3rem;
@@ -102,15 +104,16 @@ footer {
     flex-wrap: wrap;
     align-content: space-around;
   }
-  .box {
+  #box {
     height: 25rem;
     width: 30rem;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
   }
-  .description {
+  #description {
     text-align: center;
+    font-size: 1rem;
   }
 
   img {
