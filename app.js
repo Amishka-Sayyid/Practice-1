@@ -32,3 +32,39 @@ box.addEventListener("mouseout", function () {
 });
 
 //function
+
+//api fetch
+
+//fetch
+async function GetImage() {
+  const response = await fetch("https://randomfox.ca/floof/");
+  console.log(response);
+
+  const data = await response.json();
+  console.log(data);
+
+  const wrangledData = data.image;
+  return wrangledData;
+}
+//create element
+const imageContainer = document.getElementById("apifetch");
+
+function createImage(foxUrl) {
+  const newImage = document.createElement("img");
+
+  newImage.src = foxUrl;
+  newImage.alt = "random fox images";
+  newImage.className = "apiImage";
+
+  imageContainer.appendChild(newImage);
+}
+//combine
+
+async function finalData() {
+  const lastData = await GetImage();
+  createImage(lastData);
+}
+
+finalData();
+finalData();
+finalData();

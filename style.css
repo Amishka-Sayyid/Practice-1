@@ -68,6 +68,18 @@ footer {
   right: 0;
 }
 
+#apifetch {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.apiImage {
+  height: 50vh;
+  width: 50vh;
+  border-radius: 2rem;
+}
+
 @media (max-width: 600px) {
   header nav {
     display: flex;
@@ -120,6 +132,18 @@ footer {
     display: flex;
     height: 17rem;
     max-width: 100%;
+    border-radius: 2rem;
+  }
+  #apifetch {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+  .apiImage {
+    height: 50vh;
+    width: 50vh;
     border-radius: 2rem;
   }
 }
