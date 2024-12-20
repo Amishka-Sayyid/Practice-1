@@ -79,6 +79,22 @@ footer {
   width: 50vh;
   border-radius: 2rem;
 }
+#quoteApi {
+  display: block;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+  gap: 2rem;
+  margin: 2rem;
+}
+#quoteApi h3 {
+  text-align: center;
+}
+.quoteStyle {
+  text-align: center;
+  text-transform: capitalize;
+  color: black;
+}
 
 @media (max-width: 600px) {
   header nav {
