@@ -84,6 +84,7 @@ const options = {
 };
 async function GetQuote() {
   const response2 = await fetch(url, options);
+  console.log(response2);
 
   // Check if the response is JSON or plain text
   let quote = "No quote available",

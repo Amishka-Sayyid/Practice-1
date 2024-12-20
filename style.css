@@ -78,6 +78,7 @@ footer {
   height: 50vh;
   width: 50vh;
   border-radius: 2rem;
+  object-fit: cover;
 }
 #quoteApi {
   display: block;
@@ -89,11 +90,14 @@ footer {
 }
 #quoteApi h3 {
   text-align: center;
+  font-size: 1.4rem;
 }
 .quoteStyle {
   text-align: center;
   text-transform: capitalize;
   color: black;
+  font-size: 1.3rem;
+  padding: 1rem;
 }
 
 @media (max-width: 600px) {
@@ -158,8 +162,9 @@ footer {
     gap: 2rem;
   }
   .apiImage {
-    height: 50vh;
-    width: 50vh;
+    height: 400px;
+    width: 500px;
     border-radius: 2rem;
+    object-fit: cover;
   }
 }
