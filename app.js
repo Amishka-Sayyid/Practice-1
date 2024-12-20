@@ -84,19 +84,24 @@ const options = {
 };
 async function GetQuote() {
   const response2 = await fetch(url, options);
-  console.log(response2);
-  // Read the body only once
-  const datanew = await response2.text();
-  //  the API response is a single string and can be parsed as JSON
-  //Adjust the parsing logic based on the actual API response structure
-  let quote, quoteAuthor;
-  // Trying to parse as JSON first
-  const parsedData = JSON.parse(datanew);
-  quote = parsedData.text;
-  quoteAuthor = parsedData.author;
-  const parts = datanew.split(" - ");
-  quote = parts[0];
-  quoteauthor = parts.length > 1 ? parts[1] : "Unknown";
+
+  // Check if the response is JSON or plain text
+  let quote = "No quote available",
+    quoteAuthor = "Unknown";
+
+  try {
+    // Attempt to parse the response as JSON
+    const parsedData = await response2.json(); // Parse directly as JSON
+    quote = parsedData.text; // Assuming the response contains 'text' for the quote
+    quoteAuthor = parsedData.author || "Unknown"; // Handle missing author
+  } catch (error) {
+    // Fallback to text-based parsing if JSON parsing fails
+    const datanew = await response2.text();
+    const parts = datanew.split(" - ");
+    quote = parts[0];
+    quoteAuthor = parts.length > 1 ? parts[1] : "Unknown";
+  }
+
   return { quote, quoteAuthor };
 }
 //2.create element
