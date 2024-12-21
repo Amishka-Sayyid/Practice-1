@@ -129,3 +129,26 @@ async function finalQuoteData() {
 }
 // Call the final function to initiate the process
 finalQuoteData();
+
+//form
+
+//1.access dom
+const myForm = document.getElementById("userForm");
+
+//2.event handler
+myForm.addEventListener("submit", handleMyForm);
+
+//call back function handleMyForm
+function handleMyForm(eventSubmit) {
+  eventSubmit.preventDefault();
+
+  //make template object
+  const myFormObject = new FormData(myForm);
+  console.log(myFormObject);
+
+  //input object
+  const myFormInput = Object.fromEntries(myFormObject);
+  console.log(myFormInput);
+
+  alert("data was sent successfully");
+}

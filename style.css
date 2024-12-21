@@ -99,6 +99,20 @@ footer {
   font-size: 1.3rem;
   padding: 1rem;
 }
+.form {
+  background-image: url(https://file.forms.app/sitefile/How%20to%20customize%20your%20web%20form%20design%20cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#userForm {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 
 @media (max-width: 600px) {
   header nav {
