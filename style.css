@@ -100,9 +100,11 @@ footer {
   padding: 1rem;
 }
 .form {
-  background-image: url(https://file.forms.app/sitefile/How%20to%20customize%20your%20web%20form%20design%20cover.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: linear-gradient(
+    to top,
+    rgb(232, 193, 163),
+    rgb(195, 114, 87, 0)
+  );
 }
 
 #userForm {
