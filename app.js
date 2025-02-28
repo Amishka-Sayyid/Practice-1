@@ -74,14 +74,9 @@ finalData();
 //1.fetch
 const url =
   "https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=ipworld.info";
-const options = {
-  method: "GET",
-  headers: {
-    "x-rapidapi-key": "113c364abamsh56dec0b45d4deb3p1c5155jsna0cda7243a30",
-    "x-rapidapi-host":
-      "quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com",
-  },
-};
+
+import options from "./config";
+
 async function GetQuote() {
   const response2 = await fetch(url, options);
   console.log(response2);
